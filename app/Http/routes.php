@@ -27,12 +27,12 @@ Route::get('user/{id}/{name?}',function($id,$name = 'phper'){
 })->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
 
 //路由别名
-Route::get('user/menber-center',['as'=>'center',function(){
+Route::get('user/member-center',['as'=>'center',function(){
 		return Route('center');
 }]);
 
 //路由群组
-Route::group(['prefix'=>'menber'],function(){
+Route::group(['prefix'=>'member'],function(){
 	Route::get('info',function(){
 		return 1;
 	});
@@ -44,8 +44,8 @@ Route::get('info',function(){
 });
 
 //关联控制器
-//Route::get('menber/info','MemberController@info');
-Route::get('menber/info',[
+//Route::get('member/info','MemberController@info');
+Route::get('member/info',[
 	'uses'=>'MemberController@info'
 ]);
 

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 class MemberController extends Controller
 {
 	public function info()
 	{
-		return 'menber-info';
+		$res = DB::select('select * from weixin_item');
+		//var_dump($res);
 	}
 }
