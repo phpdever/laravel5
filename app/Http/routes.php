@@ -32,11 +32,13 @@ Route::get('user/member-center',['as'=>'center',function(){
 }]);
 
 //路由群组
+/*
 Route::group(['prefix'=>'member'],function(){
 	Route::get('info',function(){
 		return 1;
 	});
 });
+*/
 
 //路由视图
 Route::get('info',function(){

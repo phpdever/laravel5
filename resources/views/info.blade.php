@@ -1,1 +1,2 @@
-info blade file 
+{{$name}}
+{{$age}}
