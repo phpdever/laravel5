@@ -11,4 +11,8 @@ class MemberController extends Controller
 		$res = DB::select('select * from weixin_item');
 		//var_dump($res);
 	}
+	
+	public function contact(){
+		return view('pages/contact');
+	}
 }

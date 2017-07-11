@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('pages/about','PagesController@about');
+
+Route::get('contact','PagesController@contact');
+
+Route::get('article','ArticleController@index');
+
 //多请求路由
 Route::match(['get','post'],'basic',function(){
 		return 'hello world';
