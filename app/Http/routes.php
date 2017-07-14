@@ -21,6 +21,10 @@ Route::get('contact','PagesController@contact');
 
 Route::get('article','ArticleController@index');
 
+Route::get('/articles','ArticlesController@index');
+
+Route::get('/articles/{id}','ArticlesController@show');
+
 //多请求路由
 Route::match(['get','post'],'basic',function(){
 		return 'hello world';
