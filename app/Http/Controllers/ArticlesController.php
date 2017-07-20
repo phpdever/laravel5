@@ -23,4 +23,10 @@ class ArticlesController extends Controller
 			$articles = Article::find($id);
 			return view('articles/show',compact('articles'));
 	}
+	
+	//添加文章
+	public function create()
+	{
+		return view('articles/create');
+	}
 }
