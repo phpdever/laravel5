@@ -27,6 +27,8 @@ Route::get('/articles/{id}','ArticlesController@show');
 
 Route::get('/articles/create','ArticlesController@create');
 
+//Route::get('/articles/delete','ArticlesController@delete');
+
 //多请求路由
 Route::match(['get','post'],'basic',function(){
 		return 'hello world';
